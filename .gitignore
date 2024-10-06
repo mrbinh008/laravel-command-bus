@@ -1,0 +1,13 @@
+/.phpunit.cache
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+/.fleet
+/.idea
+/.vscode
+/.zed
+/logs
