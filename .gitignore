@@ -11,3 +11,4 @@ Homestead.yaml
 /.vscode
 /.zed
 /logs
+/mailhog
