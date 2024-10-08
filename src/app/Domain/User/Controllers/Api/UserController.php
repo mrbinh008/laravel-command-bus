@@ -39,9 +39,9 @@ class UserController
     public function store(Request $request): JsonResponse
     {
         $updateUserCommand = CreateUserData::from([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => $request->password,
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'password' => $request->input('password'),
         ]);
         $updateUserHandler = app()->make(CreateUserHandler::class);
         $result = Bus::dispatchNow($updateUserCommand, $updateUserHandler);
