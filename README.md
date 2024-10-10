@@ -70,8 +70,7 @@ Actions contain the business logic for a specific use case.
 ```php
 namespace Domain\User\Actions;
 
-use Domain\User\Data\CreateUserData;
-use Domain\User\Models\User;
+use App\Infrastructure\Database\Models\User;
 
 class CreateUserAction
 {

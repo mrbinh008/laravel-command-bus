@@ -1,21 +1,22 @@
 <?php
 
-namespace Domain\User\Data;
+namespace App\Domain\User\Data;
 
+use App\Infrastructure\Database\Models\User;
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Attributes\Validation\Email;
 use Spatie\LaravelData\Attributes\Validation\StringType;
 use Spatie\LaravelData\Attributes\Validation\Unique;
 use Spatie\LaravelData\Data;
 use Spatie\LaravelData\Mappers\SnakeCaseMapper;
+use Spatie\LaravelData\Support\Validation\References\RouteParameterReference;
 
 #[MapInputName(SnakeCaseMapper::class)]
-class CreateUserData extends Data
+class UpdateUserData extends Data
 {
+    public User $user;
     #[StringType]
     public string $name;
-    #[Email, StringType,Unique('users', 'email')]
+    #[Email, StringType, Unique('users', 'email', ignore: new RouteParameterReference('user', 'id'))]
     public string $email;
-    #[StringType]
-    public string $password;
 }

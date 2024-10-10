@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Domain\User\Handlers;
+namespace App\Application\Handlers;
 
 
-use Domain\User\Actions\CreateUserAction;
+use App\Application\Actions\CreateUserAction;
+use App\Infrastructure\Database\Models\User;
 use Domain\User\Data\CreateUserData;
-use Domain\User\Models\User;
 
 class CreateUserHandler
 {

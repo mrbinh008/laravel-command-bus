@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Domain\User\Actions;
+namespace App\Application\Actions;
 
-use Domain\User\Models\User;
+use App\Infrastructure\Database\Models\User;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-class GetListUserAction
+readonly class GetListUserAction
 {
     public function __construct(
         private User $model

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domain\User\Handlers;
+namespace App\Application\Handlers;
 
+use App\Application\Actions\GetListUserAction;
 use App\Domain\Shared\Queries\BaseGetListQuery;
-use App\Domain\User\Actions\GetListUserAction;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 readonly class GetListUserHandler
