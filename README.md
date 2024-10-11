@@ -14,20 +14,27 @@ The project is organized into several layers, each with a specific responsibilit
 
 ### Example Structure
 
-```
+```plaintext
 src/
 ├── app/
+│   ├── Application/
+│   │   └── Actions/
+│   │       └── CreateUserAction.php
 │   ├── Domain/
 │   │   ├── User/
-│   │   │   ├── Actions/
-│   │   │   ├── Data/
 │   │   │   ├── Handlers/
-│   │   │   ├── Controllers/
-│   │   │   ├── Models/
-├── database/
-│   ├── factories/
-│   ├── migrations/
-│   ├── seeders/
+│   │   │   │   └── CreateUserHandler.php
+│   │   │   ├── Actions/
+│   │   │   │   └── CreateUserAction.php
+│   │   │   └── Data/
+│   │   │       └── CreateUserData.php
+│   ├── Infrastructure/
+│   │   └── Database/
+│   │       └── Models/
+│   │           └── User.php
+│   └── Presentation/
+├── .env
+└── README.md
 ```
 
 ## Key Components

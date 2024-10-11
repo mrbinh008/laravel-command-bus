@@ -4,8 +4,8 @@ namespace App\Application\Handlers;
 
 
 use App\Application\Actions\CreateUserAction;
+use App\Domain\User\CreateUserData;
 use App\Infrastructure\Database\Models\User;
-use Domain\User\Data\CreateUserData;
 
 class CreateUserHandler
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain\User\Data;
+namespace App\Domain\User;
 
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Attributes\Validation\Email;

@@ -6,11 +6,11 @@ use App\Application\Handlers\CreateUserHandler;
 use App\Application\Handlers\GetListUserHandler;
 use App\Application\Handlers\UpdateUserHandler;
 use App\Domain\Shared\Queries\BaseGetListQuery;
-use App\Domain\User\Data\UpdateUserData;
-use App\Domain\User\Data\UserData;
+use App\Domain\User\CreateUserData;
+use App\Domain\User\UpdateUserData;
+use App\Domain\User\UserData;
 use App\Infrastructure\Database\Models\User;
 use App\Presenter\Http\Controllers\Controller;
-use Domain\User\Data\CreateUserData;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Bus;
@@ -24,7 +24,7 @@ class UserController extends Controller
     public function __construct(
         private readonly GetListUserHandler $getListUserHandler,
         private readonly CreateUserHandler  $createUserHandler,
-        private readonly UpdateUserHandler $updateUserHandler
+        private readonly UpdateUserHandler  $updateUserHandler
     )
     {
     }
@@ -61,7 +61,7 @@ class UserController extends Controller
         ]);
         $result = Bus::dispatchNow($createUserData, $this->createUserHandler);
 
-        return $this->responseOk($result);
+        return $this->responseOk(UserData::from($result));
     }
 
     #[Route('GET', '/{user}', 'show')]

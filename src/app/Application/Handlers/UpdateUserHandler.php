@@ -3,7 +3,7 @@
 namespace App\Application\Handlers;
 
 use App\Application\Actions\UpdateUserAction;
-use App\Domain\User\Data\UpdateUserData;
+use App\Domain\User\UpdateUserData;
 
 class UpdateUserHandler
 {

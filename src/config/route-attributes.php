@@ -13,7 +13,7 @@ return [
      * Optionally, you can specify group configuration by using key/values
      */
     'directories' => [
-        app_path('Domain/*/Controllers') => [
+        app_path('Presenter/Http/Controllers') => [
             'middleware' => 'web',
 //             only register routes in files that match the patterns
             'patterns' => ['*Controller.php'],
@@ -21,7 +21,7 @@ return [
             'not_patterns' => [],
         ],
 
-        app_path('Domain/*/Controllers/Api') => [
+        app_path('Presenter/Http/Controllers/Api') => [
             'prefix' => 'api/v1',
             'middleware' => 'api',
 //             only register routes in files that match the patterns

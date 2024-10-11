@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\User\Data;
+namespace App\Domain\User;
 
 use App\Infrastructure\Database\Models\User;
 use Spatie\LaravelData\Attributes\MapInputName;
