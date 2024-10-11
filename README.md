@@ -1,4 +1,3 @@
-```markdown
 # Laravel DDD Pattern with DTO
 
 This project demonstrates the implementation of Domain-Driven Design (DDD) in a Laravel application, utilizing Data Transfer Objects (DTOs) for data encapsulation and transfer.
@@ -179,5 +178,3 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 
 This project is licensed under the MIT License.
 ```
-
-This README provides an overview of the project structure, key components, and instructions for getting started, running the application, and contributing.
