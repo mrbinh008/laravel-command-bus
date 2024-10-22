@@ -125,6 +125,7 @@ class Handler extends ExceptionHandler
             );
         }
 
+
         if ($e instanceof AuthorizationException) {
             return $this->responseError(
                 Response::HTTP_FORBIDDEN,
