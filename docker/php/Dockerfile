@@ -51,6 +51,7 @@ COPY . /var/www
 COPY docker/php/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY docker/php/supervisord.d/queue-worker.conf /etc/supervisor/conf.d/queue-worker.conf
 COPY docker/php/supervisord.d/schedule.conf /etc/supervisor/conf.d/schedule.conf
+COPY docker/php/php.ini /usr/local/etc/php/php.ini
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
