@@ -1,5 +1,5 @@
 # Dockerfile
-FROM php:8.2-fpm
+FROM php:8.3-fpm
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -21,13 +21,6 @@ RUN apt-get update && apt-get install -y \
     supervisor \
     && pecl install redis \
     && docker-php-ext-enable redis
-
-# Install Node.js
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - \
-    && apt-get install -y nodejs \
-    && npm -v \
-    && npm install -g yarn@latest \
-    && yarn -v
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
