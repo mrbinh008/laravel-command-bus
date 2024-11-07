@@ -24,11 +24,13 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
       POSTGRES_DB: ${POSTGRES_DB:-shops_ecommerce}
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - db-store:/var/lib/postgresql/data
       - ./docker/postgresql/postgresql.conf:/etc/postgresql/postgresql.conf
     ports:
       - "${DATABASE_PORT:-5432}:5432"
     command: [ "postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+    networks:
+      - app-network
 
   nginx:
     image: nginx:alpine
